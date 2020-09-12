@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
 
@@ -8,6 +8,7 @@
         {{ s.name }} <br>
         {{ s.email }} <br>
         {{ s.contact_no }} <br>
+        <img src="{% static "StudentManagement/meme1.jpg" %}" alt="My image" width="200" height="200">
     {% endfor %}
 
 {% endblock content %}
