@@ -14,7 +14,6 @@ def showStudents(request):
 
 
 def insertStudent(request):
-
     message = ""
     form = StudentForm()
 

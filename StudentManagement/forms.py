@@ -5,3 +5,4 @@ class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = ('name', 'email', 'contact_no')
+        #fields = '__all__'
