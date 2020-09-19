@@ -9,6 +9,23 @@
 <body>
 This is the base template
 
+<br>
+
+
+
+
+<a href="{% url 'students' %}">Student List</a><br>
+<a href="{% url 'insertstudent' %}">Insert Student</a><br>
+
+{% if user.is_authenticated %}
+    <h3>{{ user.username }}</h3>
+    <a href="{% url 'logout' %}">Logout</a><br>
+{% else %}
+    <h3> Stranger!</h3>
+    <a href="{% url 'registration' %}">Sign Up</a><br>
+    <a href="{% url 'login' %}">Login</a><br>
+{% endif %}
+
 {% block content %}
 
 {% endblock content %}
