@@ -4,7 +4,6 @@ from .forms import StudentForm
 
 # Create your views here.
 
-
 def showStudents(request):
     studentList = Student.objects.all()
     context = {
