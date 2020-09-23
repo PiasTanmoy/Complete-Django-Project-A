@@ -16,6 +16,10 @@ This is the base template
 
 <a href="{% url 'students' %}">Student List</a><br>
 <a href="{% url 'insertstudent' %}">Insert Student</a><br>
+<a href="{% url 'insert-club' %}">Insert Club</a><br>
+<a href="{% url 'clubs' %}"> Club List</a><br>
+<a href="{% url 'profile' %}">profile</a><br>
+<a href="{% url 'create-profile' %}">create profile</a><br>
 
 {% if user.is_authenticated %}
     <h3>{{ user.username }}</h3>

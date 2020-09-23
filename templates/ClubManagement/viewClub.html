@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+    {% for c in clubs %}
+        <h2>club info:  {{ c.id }} </h2>
+        {{ c.name }} <br>
+        <img src="{{ c.logo.url }}" width="300" height="300"> <br>
+        <a href="{{  c.constitution.url }}">View Constitution</a>  <br>
+    {% endfor %}
+
+{% endblock content %}
+
