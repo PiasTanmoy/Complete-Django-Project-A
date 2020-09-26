@@ -1,29 +1,27 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
 
-    <div class="card-deck">
+    <div class="card-columns">
 
     {% for s in students %}
 
         <div class="card">
-
+            <img class="card-img-top" src="../../media/images/logo/Car-Wheel.jpg" alt="Card image cap">
             <div class="card-body">
-
-              <h5 class="card-title"> {{ s.id }}</h5>
-
+              <h5 class="card-title">{{ s.id }}</h5>
               <p class="card-text">
-                  {{ s.name }}
-              </p>
+                  Name: {{ s.name }} <br>
+                  Contact No:  {{ s.contact_no }} <br>
+                  Advisor: {{ s.advisor }} <br>
 
-              <p class="card-text">
-                  {{ s.contact_no }}
-              </p>
 
+              </p>
             </div>
-
           </div>
+
 
     {% endfor %}
 

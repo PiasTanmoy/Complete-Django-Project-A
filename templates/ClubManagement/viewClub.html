@@ -21,7 +21,13 @@
               </p>
 
                 <p class="card-text">
-                  <a href="{{  c.constitution.url }}">View Constitution</a>  <br>
+                    {% if c.constitution is none %}
+
+                    {% else %}
+
+                        <a href="{{  c.constitution.url }}">View Constitution</a>  <br>
+
+                    {% endif %}
               </p>
 
 
