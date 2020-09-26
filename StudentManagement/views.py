@@ -13,8 +13,12 @@ def showStudents(request):
     }
     return render(request, 'StudentManagement/studentlist.html', context)
 
+
+
 @login_required
 def insertStudent(request):
+
+
     message = ""
     form = StudentForm()
 

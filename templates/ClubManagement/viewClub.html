@@ -4,12 +4,35 @@
 
 {% block content %}
 
+    <div class="card-deck">
+
     {% for c in clubs %}
-        <h2>club info:  {{ c.id }} </h2>
-        {{ c.name }} <br>
-        <img src="{{ c.logo.url }}" width="300" height="300"> <br>
-        <a href="{{  c.constitution.url }}">View Constitution</a>  <br>
+
+        <div class="card">
+
+            <img class="card-img-top" src="{{ c.logo.url }}" alt="Card image cap">
+
+            <div class="card-body">
+
+              <h5 class="card-title"> {{ c.id }} </h5>
+
+              <p class="card-text">
+                  {{ c.name }}
+              </p>
+
+                <p class="card-text">
+                  <a href="{{  c.constitution.url }}">View Constitution</a>  <br>
+              </p>
+
+
+            </div>
+
+          </div>
+
+
     {% endfor %}
+
+    </div>
 
 {% endblock content %}
 

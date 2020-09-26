@@ -3,12 +3,31 @@
 
 {% block content %}
 
+    <div class="card-deck">
+
     {% for s in students %}
-        <h2>Student info:  {{ s.id }} </h2>
-        {{ s.name }} <br>
-        {{ s.email }} <br>
-        {{ s.contact_no }} <br>
+
+        <div class="card">
+
+            <div class="card-body">
+
+              <h5 class="card-title"> {{ s.id }}</h5>
+
+              <p class="card-text">
+                  {{ s.name }}
+              </p>
+
+              <p class="card-text">
+                  {{ s.contact_no }}
+              </p>
+
+            </div>
+
+          </div>
+
     {% endfor %}
+
+    </div>
 
 {% endblock content %}
 
