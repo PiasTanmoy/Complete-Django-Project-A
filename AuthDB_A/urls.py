@@ -28,6 +28,7 @@ urlpatterns = [
     path('students/', student_views.showStudents,  name='students'),
     path('insertstudent/', student_views.insertStudent, name='insertstudent'),
     path('registration/', user_views.registration, name='registration'),
+
     path('accounts/', include('django.contrib.auth.urls')),
 
     path('clubs/', club_views.showClub, name='clubs'),
@@ -39,3 +40,13 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
+'''
+accounts/login/ [name='login']
+accounts/logout/ [name='logout']
+accounts/password_change/ [name='password_change'] [password_change_form]
+accounts/password_change/done/ [name='password_change_done']
+accounts/password_reset/ [name='password_reset']
+accounts/password_reset/done/ [name='password_reset_done']
+accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
+accounts/reset/done/ [name='password_reset_complete']
+'''
